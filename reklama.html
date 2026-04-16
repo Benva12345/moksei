@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Reklama</title>
+</head>
+<body>
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div><A HREF ="BV04-10.html">Informacija</A></div>
+  <div><A HREF ="reklama.html">Reklamos</A></div>
+  <div><A HREF ="kontkai.html">Kontaktai</A></div>
+</div>
+
+
+<br>
+<HR NOSHADE>
+
+
+
+
+<h1><DIV ALIGN=CENTER> Reklamos </div></h1>
+<p>This is a paragraph.</p>
+
+<BR>
+
+
+<input type="text" id="searchInput"
+  placeholder="Search..."
+  oninput="filterList()" />
+
+<!-- 2. The list to filter -->
+<ul id="itemList">
+  <li>Dell Inspiron 5521 (100)</li>
+  <li>Banana</li>
+  <li>Cherry</li>
+  <!-- ...more items -->
+</ul>
+
+<script>
+function filterList() {
+  // Get what the user typed
+  const query = document.getElementById("searchInput")
+    .value.toLowerCase();
+
+  // Loop through every list item
+  const items = document.querySelectorAll("#itemList li");
+  items.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    // Show item if it matches, hide if it doesn't
+    item.style.display = text.includes(query)
+      ? "block" : "none";
+  });
+}
+</script>
+
+
+1
+<br>
+<IMG border="0" src="file:///C:\Users\Mano\Downloads\dell-inspiron-5521-veikiantis.jpg">
+
+
+
+
+
+
+
+<form action="bvaitekunas1@gmail.com" enctype=text/plain method="post"> </form>
+
