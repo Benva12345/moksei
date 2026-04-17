@@ -39,20 +39,26 @@
 
   
   
-  <div id="result"></div>
+<div id="result">Loading...</div>
 
   <script>
-    fetch('https://api.ipinfo.io/lite/8.8.8.8?token=5ba134973d6550')
+    fetch('https://ipinfo.io/json?token=5ba134973d6550')
       .then(res => res.json())
       .then(data => {
         document.getElementById('result').innerHTML = `
           <p>IP: ${data.ip}</p>
           <p>City: ${data.city}</p>
+          <p>Region: ${data.region}</p>
           <p>Country: ${data.country}</p>
           <p>ISP: ${data.org}</p>
+          <p>Timezone: ${data.timezone}</p>
+          <p>Location: ${data.loc}</p>
         `;
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        document.getElementById('result').innerHTML = 'Failed to load IP info.';
+        console.error(err);
+      });
   </script>
 
 123
