@@ -113,12 +113,10 @@
 
 <BR>
 
-<script>
 <input type="text" id="searchInput"
   placeholder="Search..."
   oninput="filterList()" />
 
-<!-- 2. The list to filter -->
 <ul id="itemList">
   <li>Bosch 100 Series</li>
   <li>Banana</li>
@@ -137,6 +135,16 @@
   <li>Fisher and Paykel Double DishDrawer</li>
   <li>Samsung 18-inch Dishwasher</li>
 </ul>
+
+<!-- The actual JavaScript goes here -->
+<script>
+  function filterList() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const items = document.querySelectorAll("#itemList li");
+    items.forEach(item => {
+      item.style.display = item.textContent.toLowerCase().includes(input) ? "" : "none";
+    });
+  }
 </script>
 
 
