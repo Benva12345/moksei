@@ -1,5 +1,95 @@
 <html>
 <head>
+   <style>
+
+    /* ── Base ── */
+    body {
+      background-color: #0d0c0b;
+      color: #e8e0d5;
+      font-family: Georgia, serif;
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 0 24px;
+      position: relative;
+    }
+
+    /* ── Glowing blob at the top ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,136,74,0.10), transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Heading with amber color ── */
+    h1 {
+      color: #c9884a;
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: #7db8a4;
+      font-size: 1.3rem;
+      margin: 32px 0 10px;
+      border-bottom: 1px solid #2e2a24;
+      padding-bottom: 8px;
+    }
+
+    /* ── Regular paragraph text ── */
+    p {
+      line-height: 1.8;
+      color: #e8e0d5;
+      margin-bottom: 16px;
+    }
+
+    /* ── Glowing blockquote ── */
+    blockquote {
+      border-left: 3px solid #c9884a;
+      background: rgba(201, 136, 74, 0.10);
+      margin: 24px 0;
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      color: #e8e0d5;
+    }
+
+    /* ── Glowing dot ── */
+    .glow-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #c9884a;
+      box-shadow: 0 0 12px rgba(201, 136, 74, 0.6);
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    /* ── Glowing button ── */
+    .glow-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 28px;
+      background: transparent;
+      border: 1px solid #c9884a;
+      color: #c9884a;
+      border-radius: 6px;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 14px rgba(201, 136, 74, 0.2);
+      transition: box-shadow 0.2s, background 0.2s;
+      text-decoration: none;
+    }
+
+    .glow-btn:hover {
+      background: rgba(201, 136, 74, 0.10);
+      box-shadow: 0 0 24px rgba(201, 136, 74, 0.4);
+    }
+
+  </style>
 <title>Kontaktai</title>
 </head>
 <body>
@@ -64,8 +154,9 @@
         console.error(err);
       });
   </script>
+</body>
+</html>
 
-1234
 
 
 
