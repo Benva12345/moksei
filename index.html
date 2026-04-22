@@ -135,7 +135,45 @@ Mūsų tikslas – padėti jums lengvai ir greitai rasti geriausią sprendimą j
 
 
 
+<input type="text" id="searchInput"
+  placeholder="Search..."
+  oninput="filterList()"
+  style="margin-bottom: 10px; padding: 6px; width: 200px;" />
 
+<ul id="itemList">
+  <li>Bosch 100 Series</li>
+  <li>Banana</li>
+  <li>Bosch 300 Series SHE53B75UC</li>
+  <li>Bosch 500 Series</li>
+  <li>Samsung DW80R9950</li>
+  <li>LG QuadWash LDF454HT</li>
+  <li>KitchenAid KDTM604KPS</li>
+  <li>Whirlpool WDP540HAMZ</li>
+  <li>Whirlpool WDT710PAHZ</li>
+  <li>Miele G 7216 SC</li>
+  <li>Miele G 5000 Series</li>
+  <li>GE Built-In Tall Tub Dishwasher</li>
+  <li>Frigidaire FDPC4221A</li>
+  <li>Beko DIN28430</li>
+  <li>Fisher and Paykel Double DishDrawer</li>
+  <li>Samsung 18-inch Dishwasher</li>
+</ul>
+
+<!-- Image AFTER, floated to the right -->
+<img src="YOUR_IMAGE.jpg" 
+     alt="Dell Plus Laptop" 
+     width="400"
+     style="float: right; margin-left: 20px;" />
+
+<script>
+  function filterList() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const items = document.querySelectorAll("#itemList li");
+    items.forEach(item => {
+      item.style.display = item.textContent.toLowerCase().includes(input) ? "" : "none";
+    });
+  }
+</script>
 
 
 
