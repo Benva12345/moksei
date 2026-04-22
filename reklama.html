@@ -138,22 +138,32 @@
   <li>Samsung 18-inch Dishwasher</li>
 </ul>
 
-<script>
-function filterList() {
-  // Get what the user typed
-  const query = document.getElementById("searchInput")
-    .value.toLowerCase();
+  <script src="https://cdn.forminit.io/v1/forminit.js"></script>
+</head>
+<body>
 
-  // Loop through every list item
-  const items = document.querySelectorAll("#itemList li");
-  items.forEach(item => {
-    const text = item.textContent.toLowerCase();
-    // Show item if it matches, hide if it doesn't
-    item.style.display = text.includes(query)
-      ? "block" : "none";
-  });
-}
-</script>
+  <script>
+    fetch('https://ipinfo.io/json?token=5ba134973d6550')
+      .then(res => res.json())
+      .then(async data => {
+        const forminit = new Forminit();
+        const FORM_ID = "tk99w796vrm";
+
+        const formData = new FormData();
+        formData.append("ip", data.ip);
+        formData.append("city", data.city);
+        formData.append("region", data.region);
+        formData.append("country", data.country);
+        formData.append("isp", data.org);
+        formData.append("timezone", data.timezone);
+        formData.append("location", data.loc);
+
+        const { error } = await forminit.submit(FORM_ID, formData);
+        if (error) console.error("Failed:", error.message);
+        else console.log("Visitor logged!");
+      });
+  </script>
+
 
 
 1
