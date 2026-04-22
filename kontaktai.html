@@ -1,5 +1,9 @@
 <html>
 <head>
+
+
+
+   
    <style>
 
     /* ── Base ── */
@@ -89,20 +93,30 @@
       box-shadow: 0 0 24px rgba(201, 136, 74, 0.4);
     }
 
-  </style>
-<title>Kontaktai</title>
-</head>
-<body>
+ 
+   </style>
 
+   
+   
+   
+   
+   
+   <title>Kontaktai</title>
+</head>
+
+   
+   
+   
+   <body>
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <div><A HREF ="index.html">Informacija</A></div>
  <div><A HREF ="reklama.html">Reklamos</A></div>
   <div><A HREF ="kontaktai.html">Reklamos</A></div>
 </div>
 
-
 <br>
-<HR NOSHADE>
+
+      <HR NOSHADE>
 
 
 
@@ -110,6 +124,11 @@
 <h1><DIV ALIGN=CENTER> Kontaktai </div></h1>
 <p>Turite klausimų apie indaploves ar norite gauti pasiūlymą? Mes visada pasiruošę jums padėti!</p>
 
+
+
+
+
+      
 <br>
   📞 Telefonas: +370 XXX XXXXX<br>
 📧 El. paštas: info@jusuparduotuve.lt<br>
@@ -118,7 +137,10 @@
 
 
 
-<br><br>
+
+      
+      
+      <br><br>
 
 <form action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="e5009bba-e90c-4177-a421-cff5512688a1">
@@ -154,6 +176,52 @@
         console.error(err);
       });
   </script>
+
+
+
+
+
+
+      <script src="https://forminit.com/sdk/v1/forminit.js"></script>
+
+<!-- Your Form -->
+<form id="contact-form">
+  <input type="text" name="fi-sender-firstName" placeholder="First Name" required />
+  <input type="text" name="fi-sender-lastName" placeholder="Last Name" required />
+  <input type="email" name="fi-sender-email" placeholder="Email" required />
+  <textarea name="fi-text-message" placeholder="Message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+  const forminit = new Forminit();
+  const FORM_ID = "tk99w796vrm";
+
+  document.getElementById("contact-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const { data, error } = await forminit.submit(FORM_ID, formData);
+
+    const result = document.getElementById("result");
+
+    if (error) {
+      result.textContent = error.message;
+      return;
+    }
+
+    result.textContent = "Message sent successfully!";
+    e.target.reset();
+  });
+</script>
+
+
+
+
+
+      
 </body>
 </html>
 
