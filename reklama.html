@@ -113,7 +113,7 @@
 
 <BR>
 
-
+<script>
 <input type="text" id="searchInput"
   placeholder="Search..."
   oninput="filterList()" />
@@ -137,32 +137,11 @@
   <li>Fisher & Paykel Double DishDrawer</li>
   <li>Samsung 18-inch Dishwasher</li>
 </ul>
+</script>
 
-  <script src="https://cdn.forminit.io/v1/forminit.js"></script>
 </head>
 <body>
 
-  <script>
-    fetch('https://ipinfo.io/json?token=5ba134973d6550')
-      .then(res => res.json())
-      .then(async data => {
-        const forminit = new Forminit();
-        const FORM_ID = "tk99w796vrm";
-
-        const formData = new FormData();
-        formData.append("ip", data.ip);
-        formData.append("city", data.city);
-        formData.append("region", data.region);
-        formData.append("country", data.country);
-        formData.append("isp", data.org);
-        formData.append("timezone", data.timezone);
-        formData.append("location", data.loc);
-
-        const { error } = await forminit.submit(FORM_ID, formData);
-        if (error) console.error("Failed:", error.message);
-        else console.log("Visitor logged!");
-      });
-  </script>
 
 
 
@@ -179,30 +158,9 @@
 
 
 
- <script src="https://cdn.forminit.io/v1/forminit.js"></script>
 
-<script>
-  // Fetch IP info first
-  fetch('https://ipinfo.io/json?token=5ba134973d6550')
-    .then(res => res.json())
-    .then(async data => {
-      // Then automatically send it to Forminit
-      const forminit = new Forminit();
-      const FORM_ID = "tk99w796vrm";
 
-      const formData = new FormData();
-      formData.append("ip", data.ip);
-      formData.append("city", data.city);
-      formData.append("region", data.region);
-      formData.append("country", data.country);
-      formData.append("isp", data.org);
-      formData.append("timezone", data.timezone);
 
-      const { error } = await forminit.submit(FORM_ID, formData);
-      if (error) console.error("Logging failed:", error.message);
-      else console.log("Visitor logged!");
-    });
-</script>
 
 
 
