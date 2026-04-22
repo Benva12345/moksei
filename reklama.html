@@ -1,6 +1,8 @@
 <html>
 <head>
-   /* ── Base ── */
+ <style>
+
+    /* ── Base ── */
     body {
       background-color: #0d0c0b;
       color: #e8e0d5;
@@ -65,8 +67,30 @@
       vertical-align: middle;
     }
 
-   
+    /* ── Glowing button ── */
+    .glow-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 28px;
+      background: transparent;
+      border: 1px solid #c9884a;
+      color: #c9884a;
+      border-radius: 6px;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 14px rgba(201, 136, 74, 0.2);
+      transition: box-shadow 0.2s, background 0.2s;
+      text-decoration: none;
+    }
+
+    .glow-btn:hover {
+      background: rgba(201, 136, 74, 0.10);
+      box-shadow: 0 0 24px rgba(201, 136, 74, 0.4);
+    }
+
   </style>
+
 <title>Reklama</title>
 </head>
 <body>
