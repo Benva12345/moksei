@@ -209,38 +209,10 @@
       vertical-align: middle;
     }
 
-    /* ── Glow button ── */
-    .glow-btn {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 12px 28px;
-      background: transparent;
-      border: 1px solid #c9884a;
-      color: #c9884a;
-      border-radius: 6px;
-      font-family: Georgia, serif;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 0 0 14px rgba(201,136,74,0.2);
-      transition: box-shadow 0.2s, background 0.2s;
-      text-decoration: none;
-    }
-    .glow-btn:hover {
-      background: rgba(201,136,74,0.10);
-      box-shadow: 0 0 24px rgba(201,136,74,0.4);
-    }
 
-    /* ── IP box ── */
-    #ip-box {
-      font-size: 0.8rem;
-      color: #5a5040;
-      margin-top: 48px;
-      border-top: 1px solid #1e1c17;
-      padding-top: 12px;
-    }
   </style>
   <title>Top 10 Dishwashers</title>
-  <script src="https://cdn.forminit.io/v1/forminit.js"></script>
+
 </head>
 <body>
 
@@ -272,7 +244,6 @@
         <h3>Bosch 300 Series SHE53B75UC</h3>
         <p>Industry benchmark. Near-silent operation at 44 dBA, flexible loading, and flawless clean results every cycle.</p>
       </div>
-      <span class="rank-badge">Best Overall</span>
     </div>
     <div class="rank-card">
       <div class="rank-number">2</div>
@@ -280,7 +251,6 @@
         <h3>Bosch 500 Series</h3>
         <p>A step up with CrystalDry technology and MyWay rack for ultimate flexibility. Premium finish, premium performance.</p>
       </div>
-      <span class="rank-badge">Premium Pick</span>
     </div>
     <div class="rank-card">
       <div class="rank-number">3</div>
@@ -288,7 +258,6 @@
         <h3>Miele G 7216 SC</h3>
         <p>German engineering at its finest. AutoDos automatic detergent dispensing and EcoTech heat pump drying.</p>
       </div>
-      <span class="rank-badge">Luxury</span>
     </div>
     <div class="rank-card">
       <div class="rank-number">4</div>
@@ -296,7 +265,6 @@
         <h3>Samsung DW80R9950</h3>
         <p>WaterWall technology delivers a powerful sweeping wall of water for thorough cleaning on all rack levels.</p>
       </div>
-      <span class="rank-badge">Innovative</span>
     </div>
     <div class="rank-card">
       <div class="rank-number">5</div>
@@ -304,7 +272,6 @@
         <h3>KitchenAid KDTM604KPS</h3>
         <p>ProWash cycle with FreeFlex third rack. A favorite among culinary enthusiasts for heavy-duty loads.</p>
       </div>
-      <span class="rank-badge">Chef's Choice</span>
     </div>
     <div class="rank-card">
       <div class="rank-number">6</div>
@@ -312,7 +279,6 @@
         <h3>LG QuadWash LDF454HT</h3>
         <p>Four spray arms cover every angle. TrueSteam technology eliminates the need for pre-rinsing.</p>
       </div>
-      <span class="rank-badge">Best Value</span>
     </div>
     <div class="rank-card">
       <div class="rank-number">7</div>
@@ -320,7 +286,6 @@
         <h3>Fisher and Paykel Double DishDrawer</h3>
         <p>Two independent drawers — run them separately or together. Ideal for small households or variable loads.</p>
       </div>
-      <span class="rank-badge">Unique Design</span>
     </div>
     <div class="rank-card">
       <div class="rank-number">8</div>
@@ -328,7 +293,6 @@
         <h3>Bosch 100 Series</h3>
         <p>Entry-level Bosch quality. Reliable, quiet, and efficient — a solid choice for budget-conscious buyers.</p>
       </div>
-      <span class="rank-badge">Budget Pick</span>
     </div>
     <div class="rank-card">
       <div class="rank-number">9</div>
@@ -336,7 +300,6 @@
         <h3>Whirlpool WDP540HAMZ</h3>
         <p>American reliability. Sensor cycle automatically adjusts water usage and wash time based on load size.</p>
       </div>
-      <span class="rank-badge">Reliable</span>
     </div>
     <div class="rank-card">
       <div class="rank-number">10</div>
@@ -344,7 +307,6 @@
         <h3>GE Built-In Tall Tub Dishwasher</h3>
         <p>Tall tub design fits large pots and pans easily. Steam prewash loosens tough food before the main cycle.</p>
       </div>
-      <span class="rank-badge">Spacious</span>
     </div>
   </div>
 
@@ -372,9 +334,7 @@
     <tr><td>GE Tall Tub</td><td>52</td><td>Steam + Heated</td><td>$$</td></tr>
   </table>
 
-  <blockquote>
-    The lower the dBA number, the quieter the machine. Anything under 45 dBA is considered whisper-quiet and barely noticeable during normal household activity.
-  </blockquote>
+
 
   <!-- PART 3 -->
   <div class="part-label" style="margin-top:48px;">Part 3</div>
@@ -386,21 +346,33 @@
     <p><strong>Bosch 300 Series SHE53B75UC</strong> — The sweet spot of price, quietness, and reliability. Consistently rated #1 by consumer reports globally.</p>
   </div>
 
-  <div class="verdict" style="border-color:#c9884a; background:rgba(201,136,74,0.07);">
-    <h3 style="color:#c9884a;">💰 Best Budget</h3>
+  <div class="verdict">
+    <h3>💰 Best Budget</h3>
     <p><strong>Bosch 100 Series</strong> — If you want Bosch quality without the price tag, this is the one. Slightly louder but just as clean.</p>
   </div>
 
-  <div class="verdict" style="border-color:#a09880; background:rgba(160,152,128,0.07);">
-    <h3 style="color:#a09880;">✨ Most Luxurious</h3>
+  <div class="verdict">
+    <h3>✨ Most Luxurious</h3>
     <p><strong>Miele G 7216 SC</strong> — Built to last 20 years. Automatic detergent dispensing and unmatched drying. Worth every cent if you cook daily.</p>
   </div>
 
-  <a class="glow-btn" href="kontaktai.html">Contact Us About Deals</a>
-
-  <div id="ip-box">Loading visitor info...</div>
-
-
+  <script>
+    function filterCards() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll("#cardList .rank-card");
+      let visible = 0;
+      cards.forEach(card => {
+        const show = card.textContent.toLowerCase().includes(input);
+        card.style.display = show ? "" : "none";
+        if (show) visible++;
+      });
+      const countEl = document.getElementById("search-count");
+      countEl.textContent = input.length > 0
+        ? visible + " result" + (visible !== 1 ? "s" : "") + " found"
+        : "";
+    }
+  </script>
 
 </body>
 </html>
+
