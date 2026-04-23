@@ -1,0 +1,354 @@
+<html>
+<head>
+  <style>
+    /* ── Base ── */
+    body {
+      background-color: #0d0c0b;
+      color: #e8e0d5;
+      font-family: Georgia, serif;
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 0 24px;
+      position: relative;
+    }
+    /* ── Glowing blob at the top ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,136,74,0.10), transparent 70%);
+      pointer-events: none;
+    }
+    h1 {
+      color: #c9884a;
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    h2 {
+      color: #7db8a4;
+      font-size: 1.3rem;
+      margin: 32px 0 10px;
+      border-bottom: 1px solid #2e2a24;
+      padding-bottom: 8px;
+    }
+    p {
+      line-height: 1.8;
+      color: #e8e0d5;
+      margin-bottom: 16px;
+    }
+    blockquote {
+      border-left: 3px solid #c9884a;
+      background: rgba(201, 136, 74, 0.10);
+      margin: 24px 0;
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      color: #e8e0d5;
+    }
+    .glow-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #c9884a;
+      box-shadow: 0 0 12px rgba(201, 136, 74, 0.6);
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .glow-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 28px;
+      background: transparent;
+      border: 1px solid #c9884a;
+      color: #c9884a;
+      border-radius: 6px;
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 14px rgba(201, 136, 74, 0.2);
+      transition: box-shadow 0.2s, background 0.2s;
+      text-decoration: none;
+    }
+    .glow-btn:hover {
+      background: rgba(201, 136, 74, 0.10);
+      box-shadow: 0 0 24px rgba(201, 136, 74, 0.4);
+    }
+
+
+
+
+
+
+
+
+    /* ── Nav ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    nav a {
+      color: #c9884a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    hr { border: none; border-top: 1px solid #2e2a24; margin: 16px 0 32px; }
+
+    /* ── Part sections ── */
+    .part-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #c9884a;
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+
+
+
+
+
+
+
+        
+
+    /* ── Search ── */
+    #searchInput {
+      background: #18160f;
+      border: 1px solid #2e2a24;
+      color: #e8e0d5;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-family: Georgia, serif;
+      font-size: 0.95rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #searchInput:focus { border-color: #c9884a; }
+    #searchInput::placeholder { color: #5a5040; }
+
+
+
+
+
+    /* ── Compare table ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.9rem;
+    }
+    th {
+      background: rgba(201,136,74,0.12);
+      color: #c9884a;
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #2e2a24;
+      font-weight: normal;
+      letter-spacing: 0.05em;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #1e1c17;
+      color: #e8e0d5;
+      vertical-align: top;
+    }
+    tr:hover td { background: rgba(201,136,74,0.05); }
+
+    /* ── Verdict box ── */
+    .verdict {
+      background: rgba(125,184,164,0.07);
+      border: 1px solid #7db8a4;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .verdict h3 {
+      color: #7db8a4;
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+
+    /* ── IP info box ── */
+    #ip-box {
+      font-size: 0.8rem;
+      color: #5a5040;
+      margin-top: 48px;
+      border-top: 1px solid #1e1c17;
+      padding-top: 12px;
+    }
+  </style>
+  <title>Top 10 Dishwashers</title>
+  <script src="https://cdn.forminit.io/v1/forminit.js"></script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="index.html">Informacija</a>
+    <a href="reklama.html">Reklamos</a>
+    <a href="kontaktai.html">Kontaktai</a>
+  </nav>
+  <hr>
+
+  <h1>Top 10 Dishwashers</h1>
+  <p style="text-align:center; color:#a09880; font-size:0.95rem;">The world's most popular dishwashers ranked by sales, reviews &amp; reliability.</p>
+
+  <!-- ══════════════════════════════════════
+       PART 1 — THE RANKED LIST
+  ══════════════════════════════════════ -->
+  <div class="part-label">Part 1</div>
+  <h2><span class="glow-dot"></span> The Ranked List</h2>
+  <p>Based on global sales data, consumer reviews, and expert ratings — here are the ten dishwashers that dominate kitchens worldwide.</p>
+
+  <input type="text" id="searchInput" placeholder="Search dishwashers..." oninput="filterCards()" />
+
+  <div id="cardList">
+    <div class="rank-card">
+      <div class="rank-number">1</div>
+      <div class="rank-info">
+        <h3>Bosch 300 Series SHE53B75UC</h3>
+        <p>Industry benchmark. Near-silent operation at 44 dBA, flexible loading, and flawless clean results every cycle.</p>
+      </div>
+      <span class="rank-badge">Best Overall</span>
+    </div>
+    <div class="rank-card">
+      <div class="rank-number">2</div>
+      <div class="rank-info">
+        <h3>Bosch 500 Series</h3>
+        <p>A step up with CrystalDry technology and MyWay rack for ultimate flexibility. Premium finish, premium performance.</p>
+      </div>
+      <span class="rank-badge">Premium Pick</span>
+    </div>
+    <div class="rank-card">
+      <div class="rank-number">3</div>
+      <div class="rank-info">
+        <h3>Miele G 7216 SC</h3>
+        <p>German engineering at its finest. AutoDos automatic detergent dispensing and EcoTech heat pump drying.</p>
+      </div>
+      <span class="rank-badge">Luxury</span>
+    </div>
+    <div class="rank-card">
+      <div class="rank-number">4</div>
+      <div class="rank-info">
+        <h3>Samsung DW80R9950</h3>
+        <p>WaterWall technology delivers a powerful sweeping wall of water for thorough cleaning on all rack levels.</p>
+      </div>
+      <span class="rank-badge">Innovative</span>
+    </div>
+    <div class="rank-card">
+      <div class="rank-number">5</div>
+      <div class="rank-info">
+        <h3>KitchenAid KDTM604KPS</h3>
+        <p>ProWash cycle with FreeFlex third rack. A favorite among culinary enthusiasts for heavy-duty loads.</p>
+      </div>
+      <span class="rank-badge">Chef's Choice</span>
+    </div>
+    <div class="rank-card">
+      <div class="rank-number">6</div>
+      <div class="rank-info">
+        <h3>LG QuadWash LDF454HT</h3>
+        <p>Four spray arms cover every angle. TrueSteam technology eliminates the need for pre-rinsing.</p>
+      </div>
+      <span class="rank-badge">Best Value</span>
+    </div>
+    <div class="rank-card">
+      <div class="rank-number">7</div>
+      <div class="rank-info">
+        <h3>Fisher and Paykel Double DishDrawer</h3>
+        <p>Two independent drawers — run them separately or together. Ideal for small households or variable loads.</p>
+      </div>
+      <span class="rank-badge">Unique Design</span>
+    </div>
+    <div class="rank-card">
+      <div class="rank-number">8</div>
+      <div class="rank-info">
+        <h3>Bosch 100 Series</h3>
+        <p>Entry-level Bosch quality. Reliable, quiet, and efficient — a solid choice for budget-conscious buyers.</p>
+      </div>
+      <span class="rank-badge">Budget Pick</span>
+    </div>
+    <div class="rank-card">
+      <div class="rank-number">9</div>
+      <div class="rank-info">
+        <h3>Whirlpool WDP540HAMZ</h3>
+        <p>American reliability. Sensor cycle automatically adjusts water usage and wash time based on load size.</p>
+      </div>
+      <span class="rank-badge">Reliable</span>
+    </div>
+    <div class="rank-card">
+      <div class="rank-number">10</div>
+      <div class="rank-info">
+        <h3>GE Built-In Tall Tub Dishwasher</h3>
+        <p>Tall tub design fits large pots and pans easily. Steam prewash loosens tough food before the main cycle.</p>
+      </div>
+      <span class="rank-badge">Spacious</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PART 2 — COMPARISON TABLE
+  ══════════════════════════════════════ -->
+  <div class="part-label" style="margin-top:48px;">Part 2</div>
+  <h2><span class="glow-dot"></span> Side-by-Side Comparison</h2>
+  <p>How do the top picks stack up against each other in the features that matter most?</p>
+
+  <table>
+    <tr>
+      <th>Model</th>
+      <th>Noise (dBA)</th>
+      <th>Drying</th>
+      <th>Price Range</th>
+    </tr>
+    <tr><td>Bosch 300 Series</td><td>44</td><td>Condensation</td><td>$$</td></tr>
+    <tr><td>Bosch 500 Series</td><td>44</td><td>CrystalDry</td><td>$$$</td></tr>
+    <tr><td>Miele G 7216 SC</td><td>42</td><td>EcoTech Heat Pump</td><td>$$$$</td></tr>
+    <tr><td>Samsung DW80R9950</td><td>48</td><td>Fan Assist</td><td>$$$</td></tr>
+    <tr><td>KitchenAid KDTM604KPS</td><td>44</td><td>Fan Enabled</td><td>$$$</td></tr>
+    <tr><td>LG QuadWash LDF454HT</td><td>48</td><td>TrueSteam</td><td>$$</td></tr>
+    <tr><td>Fisher &amp; Paykel DishDrawer</td><td>44</td><td>Condensation</td><td>$$$</td></tr>
+    <tr><td>Bosch 100 Series</td><td>50</td><td>Condensation</td><td>$</td></tr>
+    <tr><td>Whirlpool WDP540HAMZ</td><td>51</td><td>Heated Dry</td><td>$</td></tr>
+    <tr><td>GE Tall Tub</td><td>52</td><td>Steam + Heated</td><td>$$</td></tr>
+  </table>
+
+  <blockquote>
+    The lower the dBA number, the quieter the machine. Anything under 45 dBA is considered whisper-quiet and barely noticeable during normal household activity.
+  </blockquote>
+
+  <!-- ══════════════════════════════════════
+       PART 3 — BUYING GUIDE & VERDICT
+  ══════════════════════════════════════ -->
+  <div class="part-label" style="margin-top:48px;">Part 3</div>
+  <h2><span class="glow-dot"></span> Buying Guide &amp; Verdict</h2>
+  <p>Choosing a dishwasher comes down to three things: <strong style="color:#c9884a;">budget</strong>, <strong style="color:#c9884a;">noise tolerance</strong>, and <strong style="color:#c9884a;">drying preference</strong>. Here's a quick guide:</p>
+
+  <div class="verdict">
+    <h3>🏆 Best Overall</h3>
+    <p><strong>Bosch 300 Series SHE53B75UC</strong> — The sweet spot of price, quietness, and reliability. Consistently rated #1 by consumer reports globally.</p>
+  </div>
+
+  <div class="verdict" style="border-color:#c9884a; background: rgba(201,136,74,0.07); margin-top:12px;">
+    <h3 style="color:#c9884a;">💰 Best Budget</h3>
+    <p><strong>Bosch 100 Series</strong> — If you want Bosch quality without the price tag, this is the one. Slightly louder but just as clean.</p>
+  </div>
+
+  <div class="verdict" style="border-color:#a09880; background: rgba(160,152,128,0.07); margin-top:12px;">
+    <h3 style="color:#a09880;">✨ Most Luxurious</h3>
+    <p><strong>Miele G 7216 SC</strong> — Built to last 20 years. Automatic detergent dispensing and unmatched drying. Worth every cent if you cook daily.</p>
+  </div>
+
+  <a class="glow-btn" href="kontaktai.html">Contact Us About Deals</a>
+
+
+
+</body>
+</html>
