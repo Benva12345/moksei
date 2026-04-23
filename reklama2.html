@@ -36,15 +36,6 @@
       color: #e8e0d5;
       margin-bottom: 16px;
     }
-    blockquote {
-      border-left: 3px solid #c9884a;
-      background: rgba(201, 136, 74, 0.10);
-      margin: 24px 0;
-      padding: 16px 20px;
-      border-radius: 0 6px 6px 0;
-      font-style: italic;
-      color: #e8e0d5;
-    }
 
     /* ── Nav ── */
     nav {
@@ -61,31 +52,14 @@
     nav a:hover { text-decoration: underline; }
     hr { border: none; border-top: 1px solid #2e2a24; margin: 16px 0 32px; }
 
-    /* ── Part label ── */
-    .part-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #c9884a;
-      opacity: 0.7;
-      margin-bottom: 4px;
-    }
+    
 
     /* ── Search wrapper ── */
     .search-wrapper {
       position: relative;
       margin-bottom: 6px;
     }
-    .search-wrapper::before {
-      content: '🔍';
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 0.85rem;
-      opacity: 0.5;
-      pointer-events: none;
-    }
+  
     #searchInput {
       background: #18160f;
       border: 1px solid #2e2a24;
@@ -123,10 +97,7 @@
       margin-bottom: 10px;
       transition: border-color 0.2s, background 0.2s;
     }
-    .rank-card:hover {
-      border-color: #c9884a;
-      background: rgba(201,136,74,0.09);
-    }
+   
     .rank-number {
       font-size: 1.6rem;
       font-weight: bold;
@@ -146,19 +117,7 @@
       color: #a09880;
       line-height: 1.5;
     }
-    /* ── TS does nothing .rank-badge {
-      margin-left: auto;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: 1px solid #7db8a4;
-      color: #7db8a4;
-      border-radius: 4px;
-      padding: 2px 8px;
-      white-space: nowrap;
-      align-self: center;
-    }
-    ─ */
+  
 
     /* ── Compare table ── */
     table {
@@ -229,7 +188,7 @@
   <p style="text-align:center; color:#a09880; font-size:0.95rem;">The world's most popular dishwashers ranked by sales, reviews &amp; reliability.</p>
 
   <!-- PART 1 -->
-  <div class="part-label">Part 1</div>
+ 
   <h2><span class="glow-dot"></span> The Ranked List</h2>
   <p>Based on global sales data, consumer reviews, and expert ratings — here are the ten dishwashers that dominate kitchens worldwide.</p>
 
@@ -312,7 +271,7 @@
   </div>
 
   <!-- PART 2 -->
-  <div class="part-label" style="margin-top:48px;">Part 2</div>
+ 
   <h2><span class="glow-dot"></span> Side-by-Side Comparison</h2>
   <p>How do the top picks stack up against each other in the features that matter most?</p>
 
@@ -338,7 +297,7 @@
 
 
   <!-- PART 3 -->
-  <div class="part-label" style="margin-top:48px;">Part 3</div>
+
   <h2><span class="glow-dot"></span> Buying Guide &amp; Verdict</h2>
   <p>Choosing a dishwasher comes down to three things: <strong style="color:#c9884a;">budget</strong>, <strong style="color:#c9884a;">noise tolerance</strong>, and <strong style="color:#c9884a;">drying preference</strong>. Here's a quick guide:</p>
 
