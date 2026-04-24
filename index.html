@@ -1,10 +1,8 @@
 
 <html>
 <head>
- <style>
-
-    /* ── Base ── */
-    body {
+<style>
+ body {
       background-color: #0d0c0b;
       color: #e8e0d5;
       font-family: Georgia, serif;
@@ -13,8 +11,6 @@
       padding: 0 24px;
       position: relative;
     }
-
-    /* ── Glowing blob at the top ── */
     body::before {
       content: '';
       position: fixed;
@@ -22,14 +18,12 @@
       background: radial-gradient(ellipse at 50% 0%, rgba(201,136,74,0.10), transparent 70%);
       pointer-events: none;
     }
-
-    /* ── Heading with amber color ── */
     h1 {
       color: #c9884a;
       font-size: 2.4rem;
       margin-bottom: 8px;
+      text-align: center;
     }
-
     h2 {
       color: #7db8a4;
       font-size: 1.3rem;
@@ -37,60 +31,121 @@
       border-bottom: 1px solid #2e2a24;
       padding-bottom: 8px;
     }
-
-    /* ── Regular paragraph text ── */
     p {
       line-height: 1.8;
       color: #e8e0d5;
       margin-bottom: 16px;
     }
-
-    /* ── Glowing blockquote ── */
-    blockquote {
-      border-left: 3px solid #c9884a;
-      background: rgba(201, 136, 74, 0.10);
-      margin: 24px 0;
-      padding: 16px 20px;
-      border-radius: 0 6px 6px 0;
-      font-style: italic;
-      color: #e8e0d5;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
     }
-
-    /* ── Glowing dot ── */
+    nav a {
+      color: #c9884a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover { text-decoration: underline; }
+    hr { border: none; border-top: 1px solid #2e2a24; margin: 16px 0 32px; }
+    .search-wrapper {
+      position: relative;
+      margin-bottom: 6px;
+    }
+    #searchInput {
+      background: #18160f;
+      border: 1px solid #2e2a24;
+      color: #e8e0d5;
+      padding: 10px 14px 10px 36px;
+      border-radius: 6px;
+      font-family: Georgia, serif;
+      font-size: 0.95rem;
+      width: 100%;
+      box-sizing: border-box;
+      outline: none;
+    }
+    #searchInput:focus {
+      border-color: #c9884a;
+      box-shadow: 0 0 10px rgba(201,136,74,0.15);
+    }
+    #searchInput::placeholder { color: #5a5040; }
+    .rank-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: rgba(201,136,74,0.04);
+      border: 1px solid #2e2a24;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+    }
+    .rank-number {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #c9884a;
+      min-width: 36px;
+      line-height: 1;
+      opacity: 0.85;
+    }
+    .rank-info h3 {
+      margin: 0 0 4px;
+      color: #e8e0d5;
+      font-size: 1.05rem;
+    }
+    .rank-info p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: #a09880;
+      line-height: 1.5;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.9rem;
+    }
+    th {
+      background: rgba(201,136,74,0.12);
+      color: #c9884a;
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #2e2a24;
+      font-weight: normal;
+      letter-spacing: 0.05em;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #1e1c17;
+      color: #e8e0d5;
+      vertical-align: top;
+    }
+    .verdict {
+      background: rgba(125,184,164,0.07);
+      border: 1px solid #7db8a4;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 12px;
+    }
+    .verdict h3 {
+      color: #7db8a4;
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
     .glow-dot {
       display: inline-block;
       width: 10px;
       height: 10px;
       border-radius: 50%;
       background: #c9884a;
-      box-shadow: 0 0 12px rgba(201, 136, 74, 0.6);
+      box-shadow: 0 0 12px rgba(201,136,74,0.6);
       margin-right: 10px;
       vertical-align: middle;
     }
-
-    /* ── Glowing button ── */
-    .glow-btn {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 12px 28px;
-      background: transparent;
-      border: 1px solid #c9884a;
-      color: #c9884a;
-      border-radius: 6px;
-      font-family: Georgia, serif;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 0 0 14px rgba(201, 136, 74, 0.2);
-      transition: box-shadow 0.2s, background 0.2s;
-      text-decoration: none;
-    }
-
-    .glow-btn:hover {
-      background: rgba(201, 136, 74, 0.10);
-      box-shadow: 0 0 24px rgba(201, 136, 74, 0.4);
-    }
-
   </style>
+  <title>Top 10 Indaplovių</title>
+</head>
+<body>
   <title>Šiukšlėstitle</title>
 </head>
 <body>
